@@ -28,17 +28,38 @@ def crescente() :
 
 escolha = input("Deseja ver a lista crescente(C) ou Decrescente (D)?")
 
+lista_vdd = []
 if escolha =="D":
+    lista_vdd = decrescente()
     print (decrescente())
+
    
 elif escolha == "C":
+    lista_vdd = crescente()
     print(crescente())
 elif escolha != "D" and escolha!="C":
     print("Digite D ou C ")
 
 
-
+qtd_lista = len(lista_vdd)
+while True :
+    pilha = int(input("voce quer remove o valor de qual posição : [valor negativo para cancelar]:"))
+    if pilha > qtd_lista:
+            input("Não esxite esta posição, por faor digite uma posição válida(enter para continuar):")
+    
+    elif pilha >= 0 :
+        pilha -= 1
+        lista_vdd.pop(pilha)
+        print(lista_vdd)
         
+    elif pilha < 0 :
+        break 
+        
+
+
+
+
+
 
 
 
